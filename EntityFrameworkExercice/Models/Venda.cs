@@ -19,10 +19,13 @@ namespace EntityFrameworkExercice.Models
         {
 
         }
-        public Venda(DateTime date, VendaStatus status, Vendedor vendedor)
-        {            
+        public Venda(DateTime date, VendaStatus status)
+        {
             Date = date;
-            Status = status;
+            Status = status;            
+        }
+        public Venda(DateTime date, VendaStatus status, Vendedor vendedor) : this(date, status)
+        {                    
             Vendedor = vendedor;
         }
 
